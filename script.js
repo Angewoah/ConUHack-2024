@@ -46,4 +46,14 @@ function addTask() {
     }
 }
 
+// Function to delete all tasks
+function deleteAllTasks() {
+    var taskList = document.getElementById('taskList');
+    
+    // Remove all child elements (tasks) from the taskList
+    while (taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
+}
+
 
