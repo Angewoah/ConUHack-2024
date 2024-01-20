@@ -61,7 +61,16 @@ input[type="text"] {
     position: absolute; /* Position the icon absolutely within the container */
     top: 10px; /* Adjust the top value to position the icon at the top */
     right: 10px; /* Adjust the right value to position the icon at the right */
+    transition: transform 0.2s, color 0.2s;
 }
 
+/* Style for the gray color icon */
+.gray-icon {
+    color: gray; /* Set the color to gray */
+}
 
-
+/* Hover effect: increase size and change color to black */
+.hover-icon:hover {
+    transform: scale(1.2); /* Increase the icon size by 20% */
+    color: black; /* Change the color to black */
+}
