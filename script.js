@@ -1,4 +1,5 @@
 function addTask() {
+    // uwu uwu uwu uwu uwu
     const taskInput = document.getElementById("taskInput");
     const taskText = taskInput.value.trim();
     // uwu uwu uwu
