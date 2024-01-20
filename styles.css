@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFFFFF;
+    background-color: #f0f0f0;
 }
 
 .container {
@@ -9,11 +9,12 @@ body {
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     text-align: center;
-    color: #143642;
+    color: #333;
 }
 
 ul {
