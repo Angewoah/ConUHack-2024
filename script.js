@@ -1,3 +1,9 @@
+// Function to toggle the dropdown menu
+function toggleDropdown() {
+    const dropdownContent = document.getElementById("dropdownContent");
+    dropdownContent.classList.toggle("active");
+}
+
 // Function to add a new task to the to-do list
 function addTask() {
     // Get the input element where the user enters the task
@@ -39,3 +45,5 @@ function addTask() {
         taskInput.value = "";
     }
 }
+
+
