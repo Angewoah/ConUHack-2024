@@ -17,8 +17,10 @@
             </div>
         </div>
         <h1>Simple To-Do List</h1>
-        <button onclick="addTask()">Add Task</button>
-        <button onclick="deleteAllTasks()">Delete All Tasks</button> <!-- New button for deleting all tasks -->
+        <div class="task-buttons">
+            <button onclick="addTask()">Add Task</button>
+            <button onclick="deleteAllTasks()" class="delete-all">Delete All Tasks</button> <!-- Moved button for deleting all tasks -->
+        </div>
         <ul id="taskList"></ul>
     </div>
     <!-- Add Task Modal -->
@@ -27,7 +29,6 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Add New Task</h5>
-            <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
