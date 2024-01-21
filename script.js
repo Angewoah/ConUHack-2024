@@ -80,13 +80,56 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Function to insert the new task into the DOM
-function insertNewTask(taskDisplayText, taskDate) {
+document.addEventListener('DOMContentLoaded', function() {
+    var cancelButton = document.querySelector('.btn-secondary'); // Adjust the selector if necessary
+    cancelButton.addEventListener('click', function() {
+        closeModal();
+    });
+});
+
+function closeModal() {
+    // Hide the modal
+    var modal = document.getElementById('addTaskModal');
+    modal.style.display = 'none';
+
+    // Clear all fields in the form
+    var form = document.getElementById('newTaskForm');
+    form.reset();
+
+    // Reset any custom styles for disabled fields
+    var taskTime = document.getElementById('taskTime');
+    var taskDate = document.getElementById('taskDate');
+    taskTime.disabled = false;
+    taskTime.style.backgroundColor = '';
+    taskDate.disabled = false;
+    taskDate.style.backgroundColor = '';
+}
+
+function insertNewTask(taskDisplayText, taskDueDate) {
     var taskList = document.getElementById('taskList');
     var newTaskItem = document.createElement('li');
+
+    // Create the checkbox element
+    var taskCheckbox = document.createElement('input');
+    taskCheckbox.setAttribute('type', 'checkbox');
+    taskCheckbox.classList.add('task-checkbox'); // Add a class for potential styling
+    taskCheckbox.addEventListener('change', function() {
+        // Here you can handle the check/uncheck event, e.g., strike through the text
+        if (this.checked) {
+            newTaskItem.style.textDecoration = 'line-through';
+        } else {
+            newTaskItem.style.textDecoration = 'none';
+        }
+    });
+
+    // Create a label for the task text
+    var taskLabel = document.createElement('span');
+    taskLabel.textContent = taskDisplayText;
     
-    // Assuming you want the date to show as well, we'll add that
-    newTaskItem.textContent = `${taskDisplayText}`;
+    // Append the checkbox and label to the task item
+    newTaskItem.appendChild(taskCheckbox);
+    newTaskItem.appendChild(taskLabel);
+    newTaskItem.appendChild(document.createTextNode(` (Due: ${taskDueDate})`));
     taskList.appendChild(newTaskItem);
 }
 
