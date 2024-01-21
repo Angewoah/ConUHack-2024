@@ -1,5 +1,6 @@
 // Function to toggle the dropdown menu
 function toggleDropdown() {
+    console.log("Dropdown clicked");
     const dropdownContent = document.getElementById("dropdownContent");
     dropdownContent.classList.toggle("active");
 }
@@ -55,5 +56,9 @@ function deleteAllTasks() {
         taskList.removeChild(taskList.firstChild);
     }
 }
+
+// Add event listener to settings icon for dropdown
+document.getElementById("settingsIcon").addEventListener("click", toggleDropdown);
+
 
 
