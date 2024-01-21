@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
+    <div class="container_logo">
+        <img src = "simplydo.png" alt="Simplydo" class="logo">
+    </div>
     <div class="container">
         <i class="fas fa-cog gray-icon hover-icon" id="settingsIcon"></i> <!-- Settings icon -->
         <div class="dropdown">
@@ -17,11 +21,56 @@
             </div>
         </div>
         <h1>Simple To-Do List</h1>
-        <input type="text" id="taskInput" placeholder="Add a new task">
-        <button onclick="addTask()">Add Task</button>
-        <button onclick="deleteAllTasks()">Delete All Tasks</button> <!-- New button for deleting all tasks -->
+        <div class="task-buttons">
+            <button onclick="addTask()">Add Task</button>
+            <button onclick="deleteAllTasks()" class="delete-all">Delete All Tasks</button> <!-- Moved button for deleting all tasks -->
+        </div>
         <ul id="taskList"></ul>
     </div>
+    <!-- Add Task Modal -->
+<div id="addTaskModal" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Task</h5>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="newTaskForm">
+            <div class="form-group">
+              <label for="taskDescription">Task Description</label>
+              <input type="text" class="form-control" id="taskDescription">
+            </div>
+            <div class="form-group">
+              <label>Importance</label>
+              <div id="starRating">
+                <!-- You would use JavaScript to make these stars fillable -->
+                ☆☆☆☆☆
+              </div>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="dailyCheck">
+              <label class="form-check-label" for="dailyCheck">Daily Task</label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="allDayCheck">
+              <label class="form-check-label" for="allDayCheck">All Day</label>
+            </div>
+            <div class="form-group">
+              <label for="taskDate">Date</label>
+              <input type="date" class="form-control" id="taskDate">
+            </div>
+            <div class="form-group">
+              <label for="taskTime">Time</label>
+              <input type="time" class="form-control" id="taskTime">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="script.js"></script>
 </body>
 </html>
