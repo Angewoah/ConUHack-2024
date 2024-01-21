@@ -131,3 +131,18 @@ input[type="text"] {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
+
+#addNewTaskModal {
+    display: none;
+    /* Rest of your styling */
+  }
+
+.task-buttons {
+    display: flex;
+    justify-content: space-between; /* This will space out your buttons */
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.delete-all {
+    order: 2; /* This ensures the delete button is on the right */
+}
