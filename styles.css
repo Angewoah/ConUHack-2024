@@ -26,7 +26,9 @@ body {
 }
 
 .importance {
-    padding: 8px;
+    margin-top: 9px;
+    margin-right: 8px;
+    font-size: 17px;
 }
 
 .container {
@@ -143,7 +145,7 @@ input[type="text"] {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 140px;
+    min-width: 100px;
     padding: 17px;
     margin: 17px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -203,3 +205,21 @@ input[type="text"] {
     margin: 8px;
 }
 
+.form-check-input {
+    margin: 3px;
+}
+
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.05s;
+  }
+  
+  .star.selected {
+    color: #FA573E; /* Fill the star with color */
+  }
+  
+  .star:hover {
+    color: #FA573E; /* Color the star on hover */
+  }

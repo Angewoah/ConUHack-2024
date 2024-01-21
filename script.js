@@ -147,3 +147,48 @@ function deleteAllTasks() {
 // Add event listener to settings icon for dropdown
 document.getElementById("settingsIcon").addEventListener("click", toggleDropdown);
 
+// Get the star rating container and the stars
+const starRating = document.getElementById('starRating');
+const stars = starRating.textContent.trim(); // Get the stars as a string
+
+// Convert the stars into an array of span elements
+const starElements = stars.split('').map((star, index) => {
+  const span = document.createElement('span');
+  span.className = 'star';
+  span.textContent = star;
+  span.setAttribute('data-value', index + 1); // Set the star's data-value
+  return span;
+});
+
+// Clear the star rating container and append the span elements
+starRating.innerHTML = ''; // Clear the stars in the container
+starElements.forEach((starElement) => {
+  starRating.appendChild(starElement);
+});
+
+// Attach click event listeners to the stars
+starElements.forEach((starElement) => {
+  starElement.addEventListener('click', handleStarClick);
+});
+
+// Function to handle star click event
+function handleStarClick(event) {
+  const clickedStar = event.target;
+  const rating = clickedStar.getAttribute('data-value');
+
+  // Remove the "selected" class from all stars
+  starElements.forEach((starElement) => {
+    starElement.classList.remove('selected');
+  });
+
+  // Add the "selected" class to the clicked star and any previous stars
+  clickedStar.classList.add('selected');
+  for (let i = 0; i < rating - 1; i++) {
+    starElements[i].classList.add('selected');
+  }
+
+  // You can now use the "rating" variable to store the selected rating value
+  console.log('Selected rating:', rating);
+}
+
+
