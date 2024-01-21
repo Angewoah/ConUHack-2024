@@ -1,16 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+  }  
+
+  .container_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.logo {
+    height: 230px;
+    align-items: center;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: Helvetica, sans-serif;
+    background-color: #FFFCF5;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 85%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #FFFCF5;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#taskInput {
+    align-items: center;
+    justify-content: center;
+    max-width: 98%;
 }
 
 h1 {
@@ -35,7 +57,7 @@ li {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #143642;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -43,7 +65,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #FA573E;
 }
 
 input[type="text"] {
