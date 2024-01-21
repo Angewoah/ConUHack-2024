@@ -10,7 +10,7 @@
   }
 
 .logo {
-    height: 250px;
+    height: 230px;
     align-items: center;
 }
 
@@ -23,7 +23,7 @@ body {
     max-width: 85%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #0F8B8D;
+    background-color: #FFFCF5;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
@@ -65,7 +65,7 @@ button {
 }
 
 button:hover {
-    background-color: #EC9A29;
+    background-color: #FA573E;
 }
 
 input[type="text"] {
